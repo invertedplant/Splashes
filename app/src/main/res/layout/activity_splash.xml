@@ -6,12 +6,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <!-- TODO: replace the drawable entry with the ACTUAL logo -->
+    <!-- TODO: fix the wacky background colour -->
     <ImageView
         android:id="@+id/bluelogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/bluentrytemp2"
+        android:background="@color/bluEntry_main"
+        android:src="@drawable/bluentrystartup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

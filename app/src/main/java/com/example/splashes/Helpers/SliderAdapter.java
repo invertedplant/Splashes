@@ -21,11 +21,12 @@ public class SliderAdapter extends PagerAdapter {
         this.context = context;
     }
 
+    // splash images go here
     int images[]={
-        R.drawable.checkmark,
-        R.drawable.tts,
-        R.drawable.blu2th,
-        R.drawable.bluephonereplica
+        R.drawable.splash1,
+        R.drawable.splash2,
+        R.drawable.splash3,
+        R.drawable.splash4
     };
 
     int descriptions[]={
@@ -49,7 +50,7 @@ public class SliderAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
-        layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+        layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.slides_layout,container,false);
 
         ImageView imageView =  view.findViewById(R.id.slider_image);

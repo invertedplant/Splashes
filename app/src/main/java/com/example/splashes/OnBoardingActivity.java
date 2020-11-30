@@ -1,7 +1,11 @@
 package com.example.splashes;
 
 import android.content.SharedPreferences;
+import android.os.Build;
+import android.view.Gravity;
 import android.widget.LinearLayout;
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
@@ -12,6 +16,7 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.splashes.Helpers.SliderAdapter;
@@ -29,6 +34,7 @@ public class OnBoardingActivity extends AppCompatActivity {
 
     SharedPreferences sharedPreferences;
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,12 +67,14 @@ public class OnBoardingActivity extends AppCompatActivity {
         // both methods go to the login screen aka "second activity", if you want to make them redirect to other places you can of course
     }
 
+    // Deprecated next button code. RIP.
     public void next(View view) {
         viewPager.setCurrentItem(currentPos + 1);
     }
 
 
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     private void addDots(int position) {
 
         dots = new TextView[4];
@@ -76,13 +84,14 @@ public class OnBoardingActivity extends AppCompatActivity {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("•"));
             dots[i].setTextSize(35);
+            dots[i].setGravity(Gravity.CENTER);
 
             dotsLayout.addView(dots[i]);
         }
 
         if (dots.length > 0) {
-            dots[position].setTextColor(getResources().getColor(R.color.colorPrimaryDark));
-            // you can change the primary colour in styles.xml if you want another color, or just use a hex code
+            dots[position].setTextColor(getResources().getColor(R.color.bluEntry_main));
+            // you can change the primary colour in styles.xml or add a new colour in colors.xml
         }
 
     }
@@ -93,6 +102,7 @@ public class OnBoardingActivity extends AppCompatActivity {
 
         }
 
+        @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
         @Override
         public void onPageSelected(int position) {
             addDots(position);
