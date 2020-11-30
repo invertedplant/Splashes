@@ -5,4 +5,5 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="splash_background_colour">#FFFFFF</color>
     <color name="bluEntry_main">#2361E5</color>
+    <color name="thelogocolourthatisslightlydifferentfromthemaincolour">#3761E7</color>
 </resources>

@@ -5,12 +5,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <!-- TODO: fix the wacky background colour -->
     <ImageView
         android:id="@+id/bluelogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/bluEntry_main"
+        android:background="@color/thelogocolourthatisslightlydifferentfromthemaincolour"
         android:src="@drawable/bluentrystartup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
