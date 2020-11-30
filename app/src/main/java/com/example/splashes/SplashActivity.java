@@ -39,7 +39,8 @@ public class SplashActivity extends AppCompatActivity {
                 boolean isFirstTime = onBoardingScreen.getBoolean("firstTime",true);
 
                 //you can change this Boolean to be !isFirstTime when debugging, or just ignore the boolean condition entirely
-                if (isFirstTime) {
+                //TODO: not make commits if the boolean check is has an exclamation point
+                if (!isFirstTime) {
                     //on first launch, show splashes, and also keep a note that we have seen this before
                     SharedPreferences.Editor editor = onBoardingScreen.edit();
                     editor.putBoolean("firstTime",false);
