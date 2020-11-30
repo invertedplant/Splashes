@@ -6,7 +6,7 @@
     <!-- You would want these though. -->
     <string name="bluentry">BluEntry automates all your check ins &amp; check outs.</string>
     <string name="ttsauto">It provides ease to your tasks and sets reminders for them.</string>
-    <string name="bluetooth1">We use nearby networks and beacons to detect your device.\n\nMake sure Bluetooth is always enabled.</string>
+    <string name="bluetooth1">We use nearby networks and beacons to detect your device.\n\n<b>Make sure Bluetooth is always enabled.</b></string>
     <string name="location">You will need to be within 100m for BluEntry to detect your location.</string>
     <string name="skip_button">Skip</string>
     <string name="getstarted">Get Started</string>
@@ -14,4 +14,5 @@
     <string name="go_next">Go Next</string>
     <string name="switching">Switch</string>
     <string name="bluentry_logo">BluEntry Logo</string>
+    <string name="description_splash">Where you put the splash images.</string>
 </resources>
