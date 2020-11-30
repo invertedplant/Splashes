@@ -12,11 +12,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
-import android.view.WindowManager;
+//import android.view.WindowManager; //unused import from deprecated NEXT function.
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.splashes.Helpers.SliderAdapter;
@@ -32,13 +31,10 @@ public class OnBoardingActivity extends AppCompatActivity {
     Animation animation;
     int currentPos;
 
-    SharedPreferences sharedPreferences;
-
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_onboarding);
 
         //Hooks
@@ -67,11 +63,11 @@ public class OnBoardingActivity extends AppCompatActivity {
         // both methods go to the login screen aka "second activity", if you want to make them redirect to other places you can of course
     }
 
-    // Deprecated next button code. RIP.
-    public void next(View view) {
+    // Deprecated next button code. RIP. Left in case someone really needs a next button.
+    /*public void next(View view) {
         viewPager.setCurrentItem(currentPos + 1);
     }
-
+    */
 
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)

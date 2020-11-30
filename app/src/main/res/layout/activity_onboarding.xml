@@ -18,11 +18,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+     <!-- Yes there are probably better functions to use than
+     this version of Switch-->
         <Switch
             android:id="@+id/switch1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Switch" />
+            android:text="@string/switching"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
     </androidx.viewpager.widget.ViewPager>
 
     <RelativeLayout

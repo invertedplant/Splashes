@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- I think this is a deprecated XML file. -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <color android:color="@color/splash_background_colour"/>
     </item>
     <item>
         <bitmap
-            android:src="@drawable/bluentrytemp2"
+            android:src="@drawable/bluentrystartup"
             android:tileMode="disabled"
             android:gravity="center"/>
     </item>

@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.example.splashes.R;
 
+// This is where all the magic happens for the sliding splash screens on OnBoardingActivity.
+
 public class SliderAdapter extends PagerAdapter {
 
     Context context;
@@ -21,15 +23,16 @@ public class SliderAdapter extends PagerAdapter {
         this.context = context;
     }
 
-    // splash images go here
-    int images[]={
+    // Instantiate images used in splash.
+    int[] images ={
         R.drawable.splash1,
         R.drawable.splash2,
         R.drawable.splash3,
         R.drawable.splash4
     };
 
-    int descriptions[]={
+    //Instantiate all of the descriptions used in splash.
+    int[] descriptions ={
         R.string.bluentry,
         R.string.ttsauto,
         R.string.bluetooth1,
@@ -43,7 +46,7 @@ public class SliderAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view == (ConstraintLayout) object;
+        return view == object;
     }
 
     @NonNull

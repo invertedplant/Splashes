@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-// This class doesn't do anything.
+// This Activity doesn't do anything. It's just here to check that the redirects are okay.
 
 public class SecondActivity extends AppCompatActivity {
 

@@ -38,8 +38,9 @@ public class SplashActivity extends AppCompatActivity {
                 onBoardingScreen = getSharedPreferences("onBoardingScreen", MODE_PRIVATE);
                 boolean isFirstTime = onBoardingScreen.getBoolean("firstTime",true);
 
-                //TODO: change !isFirstTime to isFirstTime when not debugging
-                if (!isFirstTime) {
+                //you can change this Boolean to be !isFirstTime when debugging, or just ignore the boolean condition entirely
+                if (isFirstTime) {
+                    //on first launch, show splashes, and also keep a note that we have seen this before
                     SharedPreferences.Editor editor = onBoardingScreen.edit();
                     editor.putBoolean("firstTime",false);
                     editor.apply();
@@ -49,8 +50,9 @@ public class SplashActivity extends AppCompatActivity {
                     finish();
                 }
                 else{
+                    // if not go straight to login
                     Intent intent = new Intent(SplashActivity.this, SecondActivity.class);
-                    //TODO: also replace SecondActivity with LoginScreen
+                    //TODO: Replace SecondActivity.class with actual Login screen class upon merge.
                     startActivity(intent);
                     finish();
                 }
